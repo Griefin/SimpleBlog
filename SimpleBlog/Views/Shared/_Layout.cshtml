@@ -12,9 +12,24 @@
 <body>
   <header>
     <h1>
-      <a href="@Url.RouteUrl("home")">Simple Blog</a>
+      <a href="@Url.RouteUrl("Home")">Simple Blog</a>
     </h1>
-    <a href="@Url.RouteUrl("login")">Login</a>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+      <p>welcome back @User.Identity.Name</p>
+      <a href="@Url.RouteUrl("Logout")">logout</a>
+      
+      if (User.IsInRole("Admin"))
+      {
+      <a href="@Url.Action("Index", "Posts", new { area = "Admin" })">view posts in admin</a>
+      }
+    }
+    else
+    {
+      <a href="@Url.RouteUrl("Login")">Login</a>
+    }
+
   </header>
 
   @RenderBody()
