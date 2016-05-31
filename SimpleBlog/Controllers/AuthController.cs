@@ -13,7 +13,7 @@ namespace SimpleBlog.Controllers
 
     public ActionResult Login()
     {
-      return Content("AuthController.Login");
+      return View();
     }
 
   }
