@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using SimpleBlog.ViewModels;
 using System.Web.Mvc;
-using SimpleBlog.ViewModels;
 using System.Web.Security;
 
 namespace SimpleBlog.Controllers

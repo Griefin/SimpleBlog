@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using FluentMigrator;
+﻿using FluentMigrator;
 using System.Data;
 
 namespace SimpleBlog.Migrations
